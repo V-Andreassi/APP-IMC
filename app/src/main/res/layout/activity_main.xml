@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@drawable/fundo">
+
+    <TextView
+        android:text="Bem-vindo ao App de IMC!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF" />
+
+    <!-- CardView com imagem redonda -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="75dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/imgPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sua_imagem" />
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textoIMC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O IMC (Índice de Massa Corporal) é uma medida utilizada para saber se o peso de uma pessoa está adequado à sua altura. Ele é calculado dividindo o peso (em kg) pela altura ao quadrado (em metros). Serve como um indicativo para avaliar se uma pessoa está abaixo do peso, com peso ideal, sobrepeso ou obesidade. Essa informação é útil para promover a saúde e prevenir doenças relacionadas ao peso.\n\nVale lembrar que o IMC é uma estimativa geral e pode não refletir com precisão a composição corporal de atletas ou pessoas muito musculosas. Além disso, fatores como idade, sexo, genética e condições médicas específicas também influenciam na saúde geral e não são considerados pelo IMC.\n\nPor isso, o IMC deve ser utilizado como um ponto de partida, e qualquer avaliação mais precisa deve ser feita com orientação de um profissional de saúde."
+            android:textColor="#FFFFFF" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular IMC"
+        android:layout_marginTop="24dp" />
+    <Button
+        android:id="@+id/btnHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Histórico"
+        android:layout_marginTop="16dp"
+        />
+</LinearLayout>
